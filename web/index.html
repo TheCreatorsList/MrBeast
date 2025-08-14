@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JackSucksAt Channels</title>
+  <meta name="theme-color" content="#9b5cff" />
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body> 
+  <header class="wrap">
+    <h1>JackSucksAt Channels</h1>
+    <p id="updated" class="muted">Loading…</p>
+    <div class="controls">
+      <input id="search" type="search" autocomplete="off" placeholder="Search channels…" aria-label="Search channels" />
+      <button id="sort" aria-label="Sort A → Z">A → Z</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <ul id="grid" class="grid" role="list" aria-live="polite"></ul>
+    <p id="empty" class="empty muted" hidden>No channels match your search.</p>
+  </main>
+
+  <footer class="wrap muted">
+    <p>Auto-updated on GitHub Pages • No sign-in, no API.</p>
+  </footer>
+
+  <!-- Detail modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="m-title">
+      <button id="m-close" class="close" aria-label="Close">×</button>
+      <div class="head">
+        <img id="m-pfp" class="pfp-lg" alt="">
+        <div class="head-meta">
+          <h2 id="m-title">Channel</h2>
+          <div id="m-handle" class="muted">@handle</div>
+        </div>
+      </div>
+      <ul class="stats">
+        <li><span>Subscribers</span><strong id="m-subs">—</strong></li>
+        <li><span>Videos</span><strong id="m-videos">—</strong></li>
+        <li><span>Total views</span><strong id="m-views">—</strong></li>
+      </ul>
+      <a id="m-link" class="cta" target="_blank" rel="noopener">Open channel ↗</a>
+    </div>
+  </div>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
